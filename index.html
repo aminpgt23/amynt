@@ -198,14 +198,14 @@
 
   .photo-frame {
     position:relative; width:100%; max-width:420px; margin:0 auto;
+    align-items: center; justify-content: center; display: flex;
+    align-content: center; align-self: center;
+
   }
   .photo-frame::before {
     content:''; position:absolute; inset:-3px; border-radius:12px;
-    /* background: linear-gradient(135deg, var(--accent), var(--accent2), var(--accent3)); */
     z-index:0; animation: borderSpin 4s linear infinite;
   }
-  @keyframes borderSpin { 0%{filter:hue-rotate(0deg)} 100%{filter:hue-rotate(360deg)} }
-
   .photo-frame img {
     width:100%; border-radius:10px;
     display:block; position:relative; z-index:1;
@@ -213,6 +213,12 @@
      /* aspect-ratio: 5/5; */
       object-fit: cover;
   }
+  .photo-frame img {
+  filter: drop-shadow(0 0 3px white) drop-shadow(0 0 2px white);
+  /* Efek ini memberi "pendar" putih di sekitar tepi objek, bukan bingkai tegas */
+}
+  @keyframes borderSpin { 0%{filter:hue-rotate(0deg)} 100%{filter:hue-rotate(360deg)} }
+
   .status-badge {
     position:absolute; bottom:-16px; right:-16px; z-index:3;
     background:var(--card); border:1px solid var(--border);
