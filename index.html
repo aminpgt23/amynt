@@ -10,23 +10,26 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <style>
   :root {
-    --bg: #050a0e;
-    --bg2: #0a1520;
-    --accent: #00e5ff;
-    --accent2: #7b2fff;
+    /* --bg: #050a0e;
+    --bg2: #0a1520; */
+        --bg: #080612;
+    --bg2: #1e1d20;
+    /* --accent: #00e5ff; */
+    --accent: #5f6e70;
+    --accent2: #dacdef;
     --accent3: #ff6b35;
-    --text: #e8f4f8;
+    --text: #d7eff7;
     --muted: #7a9ab0;
-    --card: #0d1e2d;
-    --border: rgba(0,229,255,0.15);
-    --glow: 0 0 30px rgba(0,229,255,0.2);
+    --card: #0b0414;
+    --border: rgba(213, 203, 246, 0.708);
+    --glow: 0 0 30px rgba(85, 83, 98, 0.2);
   }
   * { margin:0; padding:0; box-sizing:border-box; }
   html { scroll-behavior: smooth; }
   body {
     background: var(--bg);
     color: var(--text);
-    font-family: 'Syne', sans-serif;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     overflow-x: hidden;
   }
 
@@ -111,13 +114,13 @@
   }
   .hero-bg {
     position:absolute; inset:0; z-index:0;
-    background: radial-gradient(ellipse 80% 60% at 60% 40%, rgba(0,229,255,0.08) 0%, transparent 70%),
-                radial-gradient(ellipse 60% 80% at 20% 80%, rgba(123,47,255,0.1) 0%, transparent 60%);
+    /* background: radial-gradient(ellipse 80% 60% at 60% 40%, rgba(0,229,255,0.08) 0%, transparent 70%),
+                radial-gradient(ellipse 60% 80% at 20% 80%, rgba(123,47,255,0.1) 0%, transparent 60%); */
   }
   .grid-overlay {
     position:absolute; inset:0; z-index:0;
-    background-image: linear-gradient(rgba(0,229,255,0.04) 1px, transparent 1px),
-                      linear-gradient(90deg, rgba(0,229,255,0.04) 1px, transparent 1px);
+    /* background-image: linear-gradient(rgba(0,229,255,0.04) 1px, transparent 1px),
+                      linear-gradient(90deg, rgba(0,229,255,0.04) 1px, transparent 1px); */
     background-size: 60px 60px;
     animation: gridPulse 8s ease-in-out infinite;
   }
@@ -198,7 +201,7 @@
   }
   .photo-frame::before {
     content:''; position:absolute; inset:-3px; border-radius:12px;
-    background: linear-gradient(135deg, var(--accent), var(--accent2), var(--accent3));
+    /* background: linear-gradient(135deg, var(--accent), var(--accent2), var(--accent3)); */
     z-index:0; animation: borderSpin 4s linear infinite;
   }
   @keyframes borderSpin { 0%{filter:hue-rotate(0deg)} 100%{filter:hue-rotate(360deg)} }
@@ -206,7 +209,9 @@
   .photo-frame img {
     width:100%; border-radius:10px;
     display:block; position:relative; z-index:1;
-    background:#000; aspect-ratio: 4/5; object-fit: cover;
+    /* background:#000; */
+     /* aspect-ratio: 5/5; */
+      object-fit: cover;
   }
   .status-badge {
     position:absolute; bottom:-16px; right:-16px; z-index:3;
@@ -307,7 +312,7 @@
     display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;
   }
   .skill-card {
-    background: rgba(13,30,45,0.7);
+    background: var(--card);
     border: 1px solid var(--border);
     border-radius: 14px; padding: 28px 24px;
     backdrop-filter: blur(10px);
@@ -618,9 +623,9 @@
   <div class="particles" id="particles"></div>
   <div class="hero-content">
     <div class="hero-text">
-      <div class="hero-tag">Available for opportunities</div>
-      <h1>Mukhammad<br>Syafiqul<br>Amin</h1>
-      <div class="hero-typing"><span id="typed-text"></span><span class="cursor">|</span></div>
+      <div class="photo-frame">
+        <img src="amin.png" alt="Mukhammad Syafiqul Amin">
+      </div>
       <p class="hero-desc">
         Software Developer &amp; IT Technician based in Indonesia. Passionate about building smart systems — from web applications to computer vision &amp; AI-powered solutions.
       </p>
@@ -630,13 +635,8 @@
       </div>
     </div>
     <div class="hero-visual">
-      <div class="photo-frame">
-        <img src="amin.png" alt="Mukhammad Syafiqul Amin">
-        <div class="status-badge">
-          <div class="status-dot"></div>
-          <span class="status-text">FLEX PRO</span>
-        </div>
-      </div>
+           <h1>M.Syafiqul<br>Amin</h1>
+      <div class="hero-typing"><span id="typed-text"></span><span class="cursor">|</span></div>
     </div>
   </div>
 </section>
@@ -683,7 +683,7 @@
         </div>
         <div style="margin-top:24px;padding:20px;background:var(--card);border:1px solid var(--border);border-radius:10px;">
           <div style="font-family:'Space Mono',monospace;font-size:0.7rem;color:var(--accent);margin-bottom:10px;letter-spacing:2px;">SOFT SKILLS</div>
-          <p style="color:var(--muted);font-size:0.85rem;line-height:1.8;">Komunikasi yang baik · Kerja tim &amp; individu · Kepemimpinan · Fleksibel · Adaptif · Bekerja di bawah tekanan</p>
+          <p style="color:var(--muted);font-size:0.85rem;line-height:1.8;">Komunikasi yang baik · Kerja tim &amp; individu · Kepemimpinan · Fleksibel · Adaptif · Bekerja di bawah tekanan (saber roam)</p>
         </div>
       </div>
     </div>
@@ -836,16 +836,16 @@
 
       <div class="project-card reveal reveal-delay-1" data-modal="modal-espec">
         <div class="project-img-wrap">
-          <img class="project-img" src="a6.png" alt="ESPEC Admin">
+          <img class="project-img" src="abnan.png" alt="Abnan Inti Trans project">
           <div class="project-overlay">
-            <a href="https://especadminfrontend.vercel.app/" target="_blank" class="proj-link proj-link-primary" onclick="event.stopPropagation()">Live Demo</a>
+            <a href="https://abnanintitrans.com/" target="_blank" class="proj-link proj-link-primary" onclick="event.stopPropagation()">Live Demo</a>
             <span class="proj-link proj-link-secondary detail-btn">Detail</span>
           </div>
         </div>
         <div class="project-body">
-          <div class="project-tags"><span class="tag">React</span><span class="tag">Dashboard</span><span class="tag">Vercel</span></div>
-          <div class="project-title">ESPEC Admin</div>
-          <div class="project-desc">Frontend admin panel dibangun dengan React dan di-deploy di Vercel. Sistem manajemen data dengan antarmuka yang bersih dan responsif.</div>
+          <div class="project-tags"><span class="tag">React</span><span class="tag">Dashboard</span></div>
+          <div class="project-title">Abnan Inti Trans </div>
+          <div class="project-desc">Frontend admin panel dibangun dengan React . Landing Page untuk perusahaan.</div>
         </div>
       </div>
 
@@ -904,11 +904,11 @@
 <div class="modal-backdrop" id="modal-espec">
   <div class="modal">
     <button class="modal-close" data-close>&times;</button>
-    <img class="modal-img" src="a6.png" alt="ESPEC Admin">
-    <div class="modal-tags"><span class="tag">React</span><span class="tag">Dashboard</span><span class="tag">Vercel</span></div>
-    <h3>ESPEC Admin Panel</h3>
-    <p>Frontend admin panel yang dibangun menggunakan React.js dan di-deploy di platform Vercel. Antarmuka yang bersih, responsif, dan user-friendly untuk manajemen data internal. Menampilkan data statistik, tabel manajemen, dan berbagai komponen dashboard interaktif.</p>
-    <a href="https://especadminfrontend.vercel.app/" target="_blank" class="modal-link">Live Demo →</a>
+    <img class="modal-img" src="abnan.png" alt="Abnan Inti Trans">
+    <div class="modal-tags"><span class="tag">React</span><span class="tag">Dashboard</span></div>
+    <h3>Abnan Inti Trans</h3>
+    <p>Frontend admin panel yang dibangun menggunakan React.js . Antarmuka yang bersih, responsif, dan user-friendly untuk manajemen data internal. Menampilkan data statistik, tabel manajemen, dan berbagai komponen dashboard interaktif.</p>
+    <a href="https://abnanintitrans.com/" target="_blank" class="modal-link">Live Demo →</a>
   </div>
 </div>
 
@@ -1023,7 +1023,7 @@
 
 <!-- FOOTER -->
 <footer>
-  <p>© <span id="year"></span> <span>Mukhammad Syafiqul Amin</span> — Crafted with passion &amp; code.</p>
+  <p>© <span id="year"></span> <span>Mukhammad Syafiqul Amin</span></p>
 </footer>
 
 <script>
