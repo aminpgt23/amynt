@@ -95,6 +95,7 @@
     font-family: var(--font-body);
     transition: background-color .35s ease, color .35s ease;
     -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
   }
   a { color: inherit; }
   img { max-width: 100%; display:block; }
@@ -208,6 +209,7 @@
   .profile-name {
     font-family: var(--font-display); font-size: 1.7rem; font-weight: 800; letter-spacing:-0.02em;
     display:flex; align-items:center; justify-content:center; gap:8px; margin-bottom:4px;
+    flex-wrap: wrap;
   }
   .profile-name .badge { color: var(--accent); font-size: 1.2rem; }
   .profile-handle { color: var(--muted); font-size: 0.92rem; margin-bottom: 14px; }
@@ -465,6 +467,41 @@
     section { padding: 40px 16px; }
     .nav-shell { padding: 12px 12px 0; }
   }
+
+  /* Perbaikan mobile lebih kecil (<480px) untuk simetri & mencegah tabrakan */
+  @media (max-width: 480px) {
+    .wrap { padding: 0 16px; }
+    .profile-name { font-size: 1.4rem; }
+    .stat-num { font-size: 1.4rem; }
+    .info-grid { grid-template-columns: 1fr; }
+    .gallery-grid { grid-template-columns: 1fr; }
+    .tabs-row {
+      flex-wrap: wrap;
+      justify-content: center;
+      background: transparent;
+      border: none;
+      box-shadow: none;
+      padding: 0;
+    }
+    .tab-link {
+      border: 1px solid var(--border);
+      background: var(--card);
+      margin: 4px;
+      padding: 8px 14px;
+      font-size: 0.76rem;
+    }
+    .tab-link.active {
+      background: var(--ink);
+      color: var(--bg);
+      border-color: var(--ink);
+    }
+    .about-card { padding: 24px; }
+    .skill-card { padding: 16px; }
+    .stat-card { padding: 14px 16px; }
+    .contact-card { padding: 24px; }
+    .btn-cta span { display: none; }
+    .btn-cta { padding: 10px 12px; }
+  }
 </style>
 </head>
 <body>
@@ -491,7 +528,7 @@
     </ul>
     <div class="nav-right">
       <button class="icon-btn" id="themeToggle" title="Ganti tema"><i class="fa fa-moon"></i></button>
-      <a href="#contact" class="btn-cta"><i class="fa fa-paper-plane"></i>Hubungi Saya</a>
+      <a href="#contact" class="btn-cta"><i class="fa fa-paper-plane"></i><span>Hubungi Saya</span></a>
       <button class="hamburger" id="hamburger" aria-label="Menu"><span></span></button>
     </div>
   </nav>
