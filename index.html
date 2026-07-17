@@ -2062,7 +2062,7 @@
 
             <!-- TABS -->
             <div class="tabs-row reveal">
-                <a href="#projects" class="tab-link active"><i class="fa-regular fa-folder"></i><span data-i18n="tabs.projects">Projects</span> <span class="tab-count">5</span></a>
+                <a href="#projects" class="tab-link active"><i class="fa-regular fa-folder"></i><span data-i18n="tabs.projects">Projects</span> <span class="tab-count">6</span></a>
                 <a href="#experience" class="tab-link"><i class="fa fa-briefcase"></i><span data-i18n="tabs.experience">Experience</span> <span class="tab-count">5</span></a>
                 <a href="#skills" class="tab-link"><i class="fa fa-bolt"></i><span data-i18n="tabs.skills">Skills</span></a>
                 <a href="#about" class="tab-link"><i class="fa-regular fa-user"></i><span data-i18n="tabs.about">About</span></a>
@@ -2304,6 +2304,21 @@
                     </div>
                 </div>
 
+                <div class="project-card reveal reveal-delay-2" data-modal="modal-hris">
+                    <div class="project-img-wrap">
+                        <img class="project-img" src="hris.png" alt="HRIS Enterprise — Demo sistem HR oleh Mukhammad Syafiqul Amin" loading="lazy">
+                        <span class="project-cat">enterprise</span>
+                    </div>
+                    <div class="project-body">
+                        <div class="project-title" data-i18n="proj.hris.title">HRIS Enterprise</div>
+                        <div class="project-desc" data-i18n="proj.hris.desc">Demo sistem Human Resource Information System (HRIS) enterprise — manajemen karyawan, payroll, absensi, dan database SDM terintegrasi.</div>
+                        <div class="project-footer">
+                            <div class="project-tech"><span>Frappe</span></div>
+                            <i class="fa fa-arrow-up-right-from-square project-link-arrow"></i>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
@@ -2362,6 +2377,17 @@
             <div class="modal-tags"><span>Python</span><span>YOLO v8</span><span>OpenCV</span></div>
             <h3 data-i18n="proj.yolo.title">Real-Time AI Object Detection</h3>
             <p data-i18n="proj.yolo.modal">Sistem AI computer vision untuk deteksi objek secara real-time menggunakan YOLOv8 pada feed CCTV. Mampu mendeteksi orang dan kendaraan bermotor dengan bounding box, label, dan confidence score. Dikembangkan menggunakan Python, OpenCV, dan model YOLO yang sudah di-fine-tune dengan dataset custom — implementasi AI automation untuk pengawasan area pabrik.</p>
+        </div>
+    </div>
+
+    <div class="modal-backdrop" id="modal-hris">
+        <div class="modal">
+            <button class="modal-close" data-close>&times;</button>
+            <img class="modal-img" src="hris.png" alt="HRIS Enterprise preview" loading="lazy">
+            <div class="modal-tags"><span>Frappe</span><span>ERPNext</span><span>HRIS</span></div>
+            <h3 data-i18n="proj.hris.title">HRIS Enterprise</h3>
+            <p data-i18n="proj.hris.modal">Demo sistem <strong>Human Resource Information System (HRIS)</strong> enterprise berbasis <strong>Frappe Framework</strong>. Meliputi manajemen data karyawan, payroll, absensi, cuti, rekrutmen, dan database SDM terintegrasi. Dibangun dengan arsitektur modular yang scalable, cocok untuk kebutuhan perusahaan skala kecil hingga enterprise. Deployment via Vercel dengan performa cepat dan responsif.</p>
+            <a href="https://hris-two-rosy.vercel.app/login" target="_blank" class="modal-link" rel="noopener" data-i18n="common.live_demo">Live Demo <i class="fa fa-arrow-up-right-from-square"></i></a>
         </div>
     </div>
 
@@ -2624,7 +2650,10 @@
                         modal: 'Frontend admin panel yang dibangun menggunakan React.js. Antarmuka yang bersih, responsif, dan user-friendly untuk manajemen data internal. Menampilkan data statistik, tabel manajemen, dan berbagai komponen dashboard interaktif dengan performa optimal.' },
                     yolo: { title: 'Real-Time AI Object Detection',
                         desc: 'Deteksi objek real-time menggunakan YOLO pada feed CCTV — solusi AI automation untuk pengawasan.',
-                        modal: 'Sistem AI computer vision untuk deteksi objek secara real-time menggunakan YOLOv8 pada feed CCTV. Mampu mendeteksi orang dan kendaraan bermotor dengan bounding box, label, dan confidence score. Dikembangkan menggunakan Python, OpenCV, dan model YOLO yang sudah di-fine-tune dengan dataset custom — implementasi AI automation untuk pengawasan area pabrik.' }
+                        modal: 'Sistem AI computer vision untuk deteksi objek secara real-time menggunakan YOLOv8 pada feed CCTV. Mampu mendeteksi orang dan kendaraan bermotor dengan bounding box, label, dan confidence score. Dikembangkan menggunakan Python, OpenCV, dan model YOLO yang sudah di-fine-tune dengan dataset custom — implementasi AI automation untuk pengawasan area pabrik.' },
+                    hris: { title: 'HRIS Enterprise',
+                        desc: 'Demo sistem Human Resource Information System (HRIS) enterprise — manajemen karyawan, payroll, absensi, dan database SDM terintegrasi.',
+                        modal: 'Demo sistem <strong>Human Resource Information System (HRIS)</strong> enterprise berbasis <strong>Frappe Framework</strong>. Meliputi manajemen data karyawan, payroll, absensi, cuti, rekrutmen, dan database SDM terintegrasi. Dibangun dengan arsitektur modular yang scalable, cocok untuk kebutuhan perusahaan skala kecil hingga enterprise. Deployment via Vercel dengan performa cepat dan responsif.' }
                 },
                 common: { live_demo: 'Live Demo' },
                 gallery: { label: '// Momen', title: 'Galeri Foto' },
@@ -2686,7 +2715,10 @@
                         modal: 'Frontend admin panel built using React.js. Clean, responsive, and user-friendly interface for internal data management. Displays statistics, management tables, and various interactive dashboard components with optimal performance.' },
                     yolo: { title: 'Real-Time AI Object Detection',
                         desc: 'Real-time object detection using YOLO on CCTV feed — AI automation solution for surveillance.',
-                        modal: 'AI computer vision system for real-time object detection using YOLOv8 on CCTV feed. Able to detect people and motor vehicles with bounding boxes, labels, and confidence scores. Developed using Python, OpenCV, and fine-tuned YOLO model with custom dataset — AI automation implementation for factory area surveillance.' }
+                        modal: 'AI computer vision system for real-time object detection using YOLOv8 on CCTV feed. Able to detect people and motor vehicles with bounding boxes, labels, and confidence scores. Developed using Python, OpenCV, and fine-tuned YOLO model with custom dataset — AI automation implementation for factory area surveillance.' },
+                    hris: { title: 'HRIS Enterprise',
+                        desc: 'Enterprise Human Resource Information System (HRIS) demo — employee management, payroll, attendance, and integrated HR database.',
+                        modal: 'Enterprise <strong>Human Resource Information System (HRIS)</strong> demo built on <strong>Frappe Framework</strong>. Includes employee data management, payroll, attendance, leave, recruitment, and integrated HR database. Built with scalable modular architecture, suitable for small to enterprise-level companies. Deployed on Vercel with fast and responsive performance.' }
                 },
                 common: { live_demo: 'Live Demo' },
                 gallery: { label: '// Moments', title: 'Photo Gallery' },
@@ -2747,7 +2779,10 @@
                         modal: '使用React.js构建的前端管理面板。界面简洁、响应式且用户友好，用于内部数据管理。显示统计数据、管理表格和各种交互式仪表板组件，性能优化。' },
                     yolo: { title: '实时AI目标检测',
                         desc: '使用YOLO对CCTV视频流进行实时目标检测 — 用于监控的AI自动化解决方案。',
-                        modal: '使用YOLOv8对CCTV视频流进行实时目标检测的AI计算机视觉系统。能够检测人和机动车辆，并显示边界框、标签和置信度分数。使用Python、OpenCV和经过自定义数据集微调的YOLO模型开发 — 工厂区域监控的AI自动化实现。' }
+                        modal: '使用YOLOv8对CCTV视频流进行实时目标检测的AI计算机视觉系统。能够检测人和机动车辆，并显示边界框、标签和置信度分数。使用Python、OpenCV和经过自定义数据集微调的YOLO模型开发 — 工厂区域监控的AI自动化实现。' },
+                    hris: { title: 'HRIS企业系统',
+                        desc: '企业人力资源信息系统（HRIS）演示 — 员工管理、薪资、考勤和集成人力资源数据库。',
+                        modal: '基于 <strong>Frappe框架</strong> 构建的企业 <strong>人力资源信息系统（HRIS）</strong> 演示。包括员工数据管理、薪资、考勤、休假、招聘和集成人力资源数据库。采用可扩展的模块化架构，适合中小型到企业级公司。部署在Vercel上，性能快速且响应灵敏。' }
                 },
                 common: { live_demo: '在线演示' },
                 gallery: { label: '// 瞬间', title: '照片图库' },
@@ -2809,7 +2844,10 @@
                         modal: 'لوحة إدارة الواجهة الأمامية تم بناؤها باستخدام React.js. واجهة نظيفة ومتجاوبة وسهلة الاستخدام لإدارة البيانات الداخلية. تعرض الإحصائيات وجداول الإدارة ومكونات لوحة المعلومات التفاعلية المختلفة بأداء مثالي.' },
                     yolo: { title: 'كشف الأشياء بالذكاء الاصطناعي في الوقت الفعلي',
                         desc: 'كشف الأشياء في الوقت الفعلي باستخدام YOLO على بث CCTV — حل أتمتة الذكاء الاصطناعي للمراقبة.',
-                        modal: 'نظام رؤية حاسوبية للذكاء الاصطناعي لكشف الأشياء في الوقت الفعلي باستخدام YOLOv8 على بث CCTV. قادر على كشف الأشخاص والمركبات ذات المحركات مع مربعات إحاطة وتسميات ودرجات ثقة. تم تطويره باستخدام Python و OpenCV ونموذج YOLO المضبوط بدقة مع مجموعة بيانات مخصصة — تنفيذ أتمتة الذكاء الاصطناعي لمراقبة منطقة المصنع.' }
+                        modal: 'نظام رؤية حاسوبية للذكاء الاصطناعي لكشف الأشياء في الوقت الفعلي باستخدام YOLOv8 على بث CCTV. قادر على كشف الأشخاص والمركبات ذات المحركات مع مربعات إحاطة وتسميات ودرجات ثقة. تم تطويره باستخدام Python و OpenCV ونموذج YOLO المضبوط بدقة مع مجموعة بيانات مخصصة — تنفيذ أتمتة الذكاء الاصطناعي لمراقبة منطقة المصنع.' },
+                    hris: { title: 'نظام HRIS المؤسسي',
+                        desc: 'عرض توضيحي لنظام معلومات الموارد البشرية (HRIS) للمؤسسات — إدارة الموظفين والرواتب والحضور وقاعدة بيانات الموارد البشرية المتكاملة.',
+                        modal: 'عرض توضيحي <strong>لنظام معلومات الموارد البشرية (HRIS)</strong> للمؤسسات مبني على <strong>إطار Frappe</strong>. يشمل إدارة بيانات الموظفين والرواتب والحضور والإجازات والتوظيف وقاعدة بيانات متكاملة للموارد البشرية. مبني بهندسة معيارية قابلة للتوسع، ومناسب للشركات الصغيرة وحتى مستوى المؤسسات. منشور على Vercel بأداء سريع ومتجاوب.' }
                 },
                 common: { live_demo: 'عرض مباشر' },
                 gallery: { label: '// اللحظات', title: 'معرض الصور' },
